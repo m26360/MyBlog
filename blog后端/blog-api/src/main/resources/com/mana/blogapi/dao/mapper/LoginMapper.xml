@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis配置文件-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mana.blogapi.dao.mapper.LoginMapper">
+
+    <!--查询是否有匹配的User-->
+    <select id="findUser" parameterType="String" resultType="com.mana.blogapi.dao.pojo.SysUser">
+        select account, id, avatar, nickname
+        from mn_sys_user
+        where account = #{account}
+          and password = #{password}
+        limit 1;
+    </select>
+</mapper>
