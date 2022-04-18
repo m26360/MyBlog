@@ -23,7 +23,7 @@ public class WebMVCConfig implements WebMvcConfigurer {
     @Override
     //跨域问题？？？？？
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("http://m26360.com");
+        registry.addMapping("/**").allowedOrigins("http://localhost:8080");
     }
 
     //拦截器
